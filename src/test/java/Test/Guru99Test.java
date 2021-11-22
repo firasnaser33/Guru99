@@ -1,5 +1,6 @@
 package Test;
 
+import Base.baseTest;
 import Pages.BasePage;
 import Pages.GuruLoginPage;
 import Pages.HomePage;
@@ -8,7 +9,7 @@ import org.testng.annotations.Test;
 import utilities.DriverUtil;
 import utilities.PropertiesReadingUtil;
 
-public class Guru99Test {
+public class Guru99Test extends baseTest {
 
     GuruLoginPage guruLoginPage;
     HomePage homePage;
