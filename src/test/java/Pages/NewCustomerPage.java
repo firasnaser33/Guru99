@@ -59,9 +59,9 @@ public class NewCustomerPage extends BasePage{
 
     public void inputInfoForNewCustomer(){
         Faker faker =new Faker();
-        customerName.sendKeys(faker.name().fullName());
+        customerName.sendKeys(faker.letterify("John Doe"));
         dateOfBirth.sendKeys(faker.numerify("05/07/1998"));
-        address.sendKeys(faker.address().streetAddress());
+        address.sendKeys(faker.letterify("123 Someone St"));
         city.sendKeys(faker.address().city());
         state.sendKeys(faker.address().state());
         pin.sendKeys(faker.numerify("030303"));

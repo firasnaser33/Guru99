@@ -10,17 +10,6 @@ import java.util.concurrent.TimeUnit;
 
 public abstract class BasePage {
 
-    @BeforeMethod
-    public void SetUp(){
-        DriverUtil.getDriver().manage().window().maximize();
-        DriverUtil.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-    }
-
-    @AfterMethod
-    public void closing(){
-        BrowserUtils.wait(2);
-        DriverUtil.closeDriver();
-    }
 
     public BasePage(){
         PageFactory.initElements(DriverUtil.getDriver(),this);
